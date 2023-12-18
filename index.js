@@ -8,19 +8,51 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
 {
     type: 'input',
-    name: 'title',
-    message: 'What is the name of your project?',
+    name: 'username',
+    message: 'What is your Github username?',
     },
     {
-    type: 'checkbox',
-    message: 'What languages do you know?',
-    name: 'stack',
-    choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
+    type: 'input',
+    name: 'email',
+    message: 'What is your email address?',
+    },
+    {
+    type: 'input',
+    name: 'title',
+    message: 'What is your project name?',
+    },
+    {
+    type: 'input',
+    name: 'description',
+    message: 'Please write a short description of your project',
     },
     {
     type: 'list',
-    message: 'What is your preferred method of communication?',
-    name: 'contact',
+    message: 'What Kind of license should your project have?',
+    name: 'license',
+    choices: ['MIT', 'CSS', 'JavaScript', 'MySQL'],
+    },
+    {
+    type: 'input',
+    name: 'installation',
+    message: 'What commands should be run to install dependencies?',
+    },
+    {
+    type: 'list',
+    message: 'What commands should be run to run tests',
+    name: 'test',
+    choices: ['email', 'phone', 'telekinesis'],
+    },
+    {
+    type: 'list',
+    message: 'What does user need to know about using the repo?',
+    name: 'knowledge',
+    choices: ['email', 'phone', 'telekinesis'],
+    },
+    {
+    type: 'list',
+    message: 'What does user need to know about contributing to the repo?',
+    name: 'contribution',
     choices: ['email', 'phone', 'telekinesis'],
     },
 ];
