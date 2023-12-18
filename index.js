@@ -27,12 +27,20 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) =>
+    err ? console.log(err) : console.log('Success!')
+    );
 }
 
 // function to initialize program
 function init() {
     inquirer
     .prompt(questions)
+    .then((data)=>{
+        console.log(data);
+        const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
+        writeToFile(filename, data);
+    })
 }
 
 // function call to initialize program
