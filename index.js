@@ -38,7 +38,7 @@ function init() {
     .prompt(questions)
     .then((data)=>{
         console.log(data);
-        const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
+        const filename = `exports/README.md`;
         writeToFile(filename, data);
     })
 }
