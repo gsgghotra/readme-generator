@@ -1,4 +1,4 @@
-# Testing structure
+# Test of the README file syntax
 
   ## Description
 
@@ -12,14 +12,23 @@
     - [Questions](#questions)
 
   ## Installation
+  To install neccessary dependencies, run the following command:
+
+  ``` bash pip install foobar ```
 
   ## Usage
 
+
   ## License
+  The Project is under the -- licencse.
 
   ## Contributing
 
   ## Tests
+  To run tests, run the following command:
+
+  ``` bash pip install foobar ```
 
   ## Questions
+  If you have any questions about the repo, open an issue or contact me directly at [Here](email@email.com). You can find more of my work at [username](https://github.com/).
 
