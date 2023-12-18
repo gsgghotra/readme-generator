@@ -8,8 +8,8 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
 {
     type: 'input',
-    name: 'name',
-    message: 'What is your name?',
+    name: 'title',
+    message: 'What is the name of your project?',
     },
     {
     type: 'checkbox',
@@ -27,8 +27,9 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), (err) =>
-    err ? console.log(err) : console.log('Success!')
+    fs.writeFile(fileName, data,
+        (err) => err ? console.log(err) : 
+        console.log('Success!')
     );
 }
 
@@ -37,9 +38,9 @@ function init() {
     inquirer
     .prompt(questions)
     .then((data)=>{
-        console.log(data);
+        const generateMarkdownFile = generateMarkdown(data);
         const filename = `exports/README.md`;
-        writeToFile(filename, data);
+        writeToFile(filename, generateMarkdownFile);
     })
 }
 
