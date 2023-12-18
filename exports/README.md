@@ -1,4 +1,6 @@
-# Test of the README file syntax
+# License badge test
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
 
