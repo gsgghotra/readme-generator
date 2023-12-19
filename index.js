@@ -30,30 +30,29 @@ const questions = [
     type: 'list',
     message: 'What Kind of license should your project have?',
     name: 'license',
-    choices: ['MIT', 'CSS', 'JavaScript', 'MySQL'],
+    choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
     },
     {
     type: 'input',
     name: 'installation',
     message: 'What commands should be run to install dependencies?',
+    default: 'npm i',
     },
     {
-    type: 'list',
-    message: 'What commands should be run to run tests',
-    name: 'test',
-    choices: ['email', 'phone', 'telekinesis'],
+    type: 'input',
+    message: 'What commands should be run to run tests?',
+    name: 'tests',
+    default: 'npm test',
     },
     {
-    type: 'list',
+    type: 'input',
     message: 'What does user need to know about using the repo?',
     name: 'knowledge',
-    choices: ['email', 'phone', 'telekinesis'],
     },
     {
-    type: 'list',
+    type: 'input',
     message: 'What does user need to know about contributing to the repo?',
     name: 'contribution',
-    choices: ['email', 'phone', 'telekinesis'],
     },
 ];
 
@@ -61,7 +60,7 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data,
         (err) => err ? console.log(err) : 
-        console.log('Success!')
+        console.log('Generating Readme...')
     );
 }
 
