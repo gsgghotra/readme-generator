@@ -1,8 +1,8 @@
-# Readme genrator
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Smart Screen Dashboard
+  [![License: GPL 3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/gpl-3.0)
 
   ## Description
-  description of the project
+  This project is personal project that help with all the used apps
 
   ## Table of Contents
 
@@ -16,16 +16,16 @@
   ## Installation
   To install neccessary dependencies, run the following command:
 
-  ``` npm i -y ```
+  ``` npm i ```
 
   ## Usage
-  Javascript
+  
 
   ## License
-  The Project is under the MIT licencse.
+  The Project is under the GPL 3.0 licencse.
 
   ## Contributing
-    Nothing
+  
 
   ## Tests
   To run tests, run the following command:

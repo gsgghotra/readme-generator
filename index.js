@@ -60,7 +60,8 @@ const questions = [
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data,
         (err) => err ? console.log(err) : 
-        console.log('Generating Readme...')
+        //Print generating readme when user finishes answering the questions
+        console.log('Generating Readme... \n The Readme file can be found in exports folder.')
     );
 }
 
@@ -70,7 +71,7 @@ function init() {
     .prompt(questions)
     .then((data)=>{
         const generateMarkdownFile = generateMarkdown(data);
-        const filename = `exports/README.md`;
+        const filename = `exports/README.md`; //Filename is fixed
         writeToFile(filename, generateMarkdownFile);
     })
 }
